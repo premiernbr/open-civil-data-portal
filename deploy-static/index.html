@@ -13,9 +13,7 @@
   <meta property="og:description" content="صفحة تعريفية عامة لاختبار الواجهة والخدمات الرقمية الأولية.">
   <title>منصة النسيج المدني | نسخة تعريفية</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238b0a15'/%3E%3Cpath d='M18 38c8-18 20-18 28 0' fill='none' stroke='%23facc15' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='26' r='7' fill='%2322c55e'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://i.ytimg.com">
-  <link rel="preconnect" href="https://www.youtube-nocookie.com">
-  <link rel="stylesheet" href="./assets/css/nsij-qr-widget.css">
+  <link rel="preload" as="image" href="./assets/img/intro-video-thumb.jpg" fetchpriority="high">
   <link rel="stylesheet" href="./assets/css/intro-video.css">
 </head>
 <body>
@@ -40,14 +38,14 @@
       <div class="intro-video-card">
         <button id="openIntroVideo" class="intro-video-thumb" type="button" aria-label="شاهد فيديو تعريفي بمنصة النسيج المدني">
           <img
-            src="https://i.ytimg.com/vi/SvigDjAbe0A/maxresdefault.jpg"
+            src="./assets/img/intro-video-thumb.jpg"
             alt="فيديو تعريفي بمنصة النسيج المدني ومسارها الرقمي وخدماتها الأولية"
             class="intro-video-cover"
-            width="1280"
-            height="720"
+            width="960"
+            height="540"
             decoding="async"
-            loading="lazy"
-            referrerpolicy="no-referrer"
+            loading="eager"
+            fetchpriority="high"
           >
 
           <span class="intro-video-play" aria-hidden="true">▶</span>
@@ -79,7 +77,6 @@
     </div>
   </div>
 
-  <script src="./assets/js/nsij-qr-widget.js" defer></script>
   <script src="./assets/js/app.js" defer></script>
 </body>
 </html>

@@ -49,3 +49,31 @@ document.addEventListener("keydown", (event) => {
     closeIntroVideo();
   }
 });
+
+function loadQrWidget() {
+  if (window.nsijQrWidgetLoaded || document.querySelector('script[src*="nsij-qr-widget.js"]')) {
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.src = "./assets/js/nsij-qr-widget.js";
+  script.async = true;
+  document.body.appendChild(script);
+}
+
+function scheduleQrWidget() {
+  window.setTimeout(() => {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(loadQrWidget, { timeout: 2500 });
+      return;
+    }
+
+    loadQrWidget();
+  }, 4200);
+}
+
+if (document.readyState === "complete") {
+  scheduleQrWidget();
+} else {
+  window.addEventListener("load", scheduleQrWidget, { once: true });
+}
