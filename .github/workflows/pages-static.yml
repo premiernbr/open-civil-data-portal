@@ -1,0 +1,42 @@
+name: Publish static site to gh-pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "deploy-static/**"
+      - ".github/workflows/pages-static.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "github-pages"
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Publish deploy-static to gh-pages branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Prepare static site
+        run: |
+          rm -rf public
+          mkdir -p public
+          cp -R deploy-static/. public/
+          touch public/.nojekyll
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          force_orphan: true

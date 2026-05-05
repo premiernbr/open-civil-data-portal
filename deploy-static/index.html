@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="منصة النسيج المدني: صفحة تعريفية عامة لاختبار الواجهة والخدمات الرقمية الأولية، مع هدية مجانية لإنشاء بطاقة QR من المتصفح.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#8b0a15">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_MA">
+  <meta property="og:title" content="منصة النسيج المدني">
+  <meta property="og:description" content="صفحة تعريفية عامة لاختبار الواجهة والخدمات الرقمية الأولية.">
+  <title>منصة النسيج المدني | نسخة تعريفية</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238b0a15'/%3E%3Cpath d='M18 38c8-18 20-18 28 0' fill='none' stroke='%23facc15' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='26' r='7' fill='%2322c55e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://img.youtube.com">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="stylesheet" href="./assets/css/nsij-qr-widget.css">
+  <link rel="stylesheet" href="./assets/css/intro-video.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <p class="eyebrow">نسخة تعريفية عامة قيد الإعداد</p>
+
+      <h1>منصة النسيج المدني</h1>
+
+      <p class="intro-lead-text">
+        هذه صفحة تعريفية أولية مفتوحة للعموم، مخصصة لاختبار الواجهة وتجربة بعض الخدمات الرقمية البسيطة قبل إطلاق النسخة المؤسسية الكاملة.
+      </p>
+
+      <p class="intro-lead-text">
+        لا تطلب هذه الصفحة أي معطيات حساسة، ولا تمثل بعدُ النسخة النهائية للمنصة. سيتم لاحقًا ربط الخدمات الرسمية وقاعدة البيانات ولوحة الإدارة بعد استكمال اختبارات الأمان والجودة.
+      </p>
+
+      <p class="intro-lead-text">
+        يمكن للزوار الاستفادة من الهدية الرقمية المجانية: إنشاء بطاقة QR لرابط موقع أو خدمة أو صفحة تواصل، مباشرة من المتصفح.
+      </p>
+
+      <div class="intro-video-card">
+        <button id="openIntroVideo" class="intro-video-thumb" type="button" aria-label="شاهد فيديو شرح منصة النسيج المدني">
+          <img
+            src="https://img.youtube.com/vi/SvigDjAbe0A/maxresdefault.jpg"
+            alt="فيديو تعريفي يشرح منصة النسيج المدني ومسارها الرقمي وخدماتها الأولية"
+            class="intro-video-cover"
+            width="1280"
+            height="720"
+            decoding="async"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          >
+
+          <span class="intro-video-play" aria-hidden="true">▶</span>
+
+          <span class="intro-video-caption">
+            شاهد الفيديو التعريفي
+          </span>
+        </button>
+
+        <p class="intro-video-small-text">
+          لمحة بصرية مختصرة عن منصة النسيج المدني ومسارها نحو خدمات رقمية منظمة وآمنة.
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <div id="introVideoModal" class="intro-video-modal" hidden>
+    <div class="intro-video-backdrop" data-close-video></div>
+
+    <div class="intro-video-dialog" role="dialog" aria-modal="true" aria-labelledby="introVideoTitle">
+      <button class="intro-video-close" type="button" data-close-video aria-label="إغلاق الفيديو">
+        ×
+      </button>
+
+      <h2 id="introVideoTitle">شرح منصة النسيج المدني</h2>
+
+      <div id="introVideoHost" class="intro-video-host"></div>
+    </div>
+  </div>
+
+  <script src="./assets/js/nsij-qr-widget.js" defer></script>
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

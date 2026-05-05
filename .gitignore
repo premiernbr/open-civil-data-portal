@@ -1,0 +1,37 @@
+.env
+.env.*
+!.env.example
+
+node_modules/
+vendor/
+!deploy-static/assets/vendor/
+!deploy-static/assets/vendor/**
+storage/
+
+# Logs and local runtime output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local editor and tool state
+.vscode/
+!.vscode/extensions.json
+.idea/
+.cache/
+.tmp/
+.sixth/chrome-cdp*/
+
+# OS files
+.DS_Store
+Thumbs.db
+deploy-static/.vscode/
+
+# Private videos - do not publish in public repo
+deploy-static/assets/video/
+assets/video/
+*.mp4
+*.mov
+*.mkv
+*.webm
