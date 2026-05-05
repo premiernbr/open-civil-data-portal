@@ -134,7 +134,7 @@ main > section .intro-lead-text {
 /* Intro video block */
 .intro-video-card {
   width: 100%;
-  max-width: 900px;
+  max-width: 1020px;
   margin: 28px auto 8px;
   padding: 0;
   border: 0;
@@ -147,7 +147,7 @@ main > section .intro-lead-text {
   box-sizing: border-box;
   position: relative;
   display: block;
-  width: min(860px, 100%);
+  width: min(980px, 100%);
   margin: 0 auto;
   overflow: hidden;
   cursor: pointer;
@@ -260,7 +260,7 @@ main > section .intro-lead-text {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: min(980px, calc(100vw - 32px));
+  width: min(1320px, calc(100vw - 32px));
   max-height: calc(100dvh - 32px);
   padding: clamp(12px, 2vw, 18px);
   border-radius: 28px;
@@ -308,7 +308,7 @@ main > section .intro-lead-text {
 
 .intro-video-host {
   flex: 0 1 auto;
-  width: min(100%, 124dvh);
+  width: min(100%, 1280px, calc((100dvh - 128px) * 16 / 9));
   margin: 0 auto;
   aspect-ratio: 16 / 9;
   overflow: hidden;

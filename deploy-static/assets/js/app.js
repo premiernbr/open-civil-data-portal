@@ -3,7 +3,7 @@ const introVideoModal = document.getElementById("introVideoModal");
 const introVideoHost = document.getElementById("introVideoHost");
 
 const INTRO_VIDEO_ID = "SvigDjAbe0A";
-const INTRO_VIDEO_EMBED_URL = `https://www.youtube-nocookie.com/embed/${INTRO_VIDEO_ID}?rel=0&modestbranding=1&autoplay=1&playsinline=1`;
+const INTRO_VIDEO_EMBED_URL = `https://www.youtube-nocookie.com/embed/${INTRO_VIDEO_ID}?rel=0&autoplay=1&playsinline=1&vq=hd720`;
 let introVideoScrollY = 0;
 
 function openIntroVideo() {
@@ -13,9 +13,10 @@ function openIntroVideo() {
 
   const iframe = document.createElement("iframe");
   iframe.src = INTRO_VIDEO_EMBED_URL;
-  iframe.title = "شرح منصة النسيج المدني";
-  iframe.loading = "lazy";
+  iframe.title = "فيديو تعريفي بمنصة النسيج المدني";
+  iframe.loading = "eager";
   iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
   iframe.allowFullscreen = true;
   introVideoHost.replaceChildren(iframe);
 
